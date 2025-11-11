@@ -8,7 +8,7 @@ export default function Page() {
     "Existem pendências do cliente com relação a este item? (Envio de documentos, informações, aprovações)",
     "O item do product backlog exige conhecimento técnico avançado ou muito específico de alguma ferramenta?",
     "A solução requer a criação de algo novo (sem referência ou base existente)?",
-    "O item pode ser concluído em 1 dia útil? (Aqui, o NÃO conta como +1 ponto)",
+    "O item pode ser concluído em 1 dia útil?",
     "O item pode ser executado por apenas uma pessoa?",
     "Será necessário aprender uma ferramenta nova para a realização do item?",
     "Existem múltiplas etapas ou componentes interdependentes (front, back, banco, infra etc.)?",
