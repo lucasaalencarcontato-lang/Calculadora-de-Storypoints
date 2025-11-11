@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧮 Calculadora de Storypoints - AutoU
 
-## Getting Started
+Aplicação web interativa para **padronizar o cálculo de Story Points** em projetos de tecnologia da **AutoU**.  
+Permite que qualquer membro do time avalie a complexidade de um *Product Backlog Item (PBI)* de forma objetiva e visual.
 
-First, run the development server:
+---
+
+## 🚀 Demonstração
+
+🔗 [Acessar Calculadora Online](https://calculadora-storypoints-autou.vercel.app)
+
+---
+
+## 🎯 Objetivo
+
+Padronizar a atribuição de **Story Points** entre times técnicos, eliminando interpretações subjetivas.  
+O cálculo é feito automaticamente a partir de **respostas padronizadas de Sim/Não** para um conjunto de perguntas sobre complexidade, dependências e riscos.
+
+---
+
+## 🧠 Critérios de Pontuação
+
+A cada resposta **“Sim”**, é somado um ponto de complexidade  
+(exceto na pergunta 4, onde o **“Não”** soma 1 ponto).
+
+| Nº de “Sim” | Pontuação | Classificação |
+|--------------|------------|----------------|
+| 0–1 | **1 ponto** | Muito simples |
+| 2 | **2 pontos** | Simples, mas com um cuidado extra |
+| 3 | **3 pontos** | Alguma complexidade / risco |
+| 4–5 | **5 pontos** | Complexo / múltiplas validações |
+| 6–7 | **8 pontos** | Muito complexo / alto grau de incerteza |
+| 8+ | **13 pontos** | Escopo grande ou desconhecido |
+
+---
+
+## 📝 Perguntas utilizadas
+
+1. Existem pendências do cliente com relação a este item? (Envio de documentos, informações, aprovações)  
+2. O item do product backlog exige conhecimento técnico avançado ou muito específico de alguma ferramenta?  
+3. A solução requer a criação de algo novo (sem referência ou base existente)?  
+4. O item pode ser concluído em 1 dia útil? (**Aqui o NÃO conta como +1 ponto**)  
+5. O item pode ser executado por apenas uma pessoa?  
+6. Será necessário aprender uma ferramenta nova para a realização do item?  
+7. Existem múltiplas etapas ou componentes interdependentes (front, back, banco, infra etc.)?  
+8. O item tem como pré-requisito outro item do backlog não concluído? (Definition of Ready)  
+9. Existem riscos de retrabalho devido a mudanças de escopo ou requisitos pouco claros?  
+10. O resultado da atividade será validado por diferentes áreas ou stakeholders?
+
+---
+
+## 🧩 Tecnologias utilizadas
+
+- **Next.js 14** — estrutura React moderna e performática  
+- **TailwindCSS** — estilização responsiva e rápida  
+- **Lucide Icons** — ícones elegantes e minimalistas  
+- **Vercel** — hospedagem e deploy contínuo gratuito
+
+---
+
+## ⚙️ Rodar localmente
+
+Clone o repositório e instale as dependências:
 
 ```bash
+git clone https://github.com/lucasaalencarcontato-lang/Calculadora-de-Storypoints.git
+cd Calculadora-de-Storypoints
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
